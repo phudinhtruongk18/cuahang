@@ -1,7 +1,6 @@
 package thang11.thread;
 
 public class in extends Thread{
-    private boolean check;
     private String trangThai="video da bat dau chay";
 
     @Override
@@ -16,8 +15,7 @@ public class in extends Thread{
         }
     }
     void updateCheck(boolean temp){
-        check = temp;
-        if (check) trangThai="video da tam dung";
+        if (temp) trangThai="video da tam dung";
             else trangThai="video is playing";
     }
 public static void main(String[] args) {
@@ -27,6 +25,8 @@ public static void main(String[] args) {
     do{
     xuatRa.run();
     nhapVao.run();
+    //ban se nhap vao cac ki tu de kiem tra
+    //neu nhap vao space thi se thay doi flagPause
     xuatRa.updateCheck(nhapVao.flagPause);
     }
     while(true);

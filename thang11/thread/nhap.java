@@ -13,9 +13,9 @@ public class nhap extends Thread {
         if (input.equals(" ")) {
             flagPause = !flagPause;
             if(flagPause)
-                System.out.println("change to playing");
+                System.out.println("Ban da bam space de pause");
             if (!flagPause) {
-                System.out.println("change to paused");
+                System.out.println("Ban da bam space de play");
 
             }
         }
